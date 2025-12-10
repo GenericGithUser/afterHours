@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+:root{
+    --text: #545454;
+    --secondary: #B87D4B;
+    --blue: #2E5EAA;
+    --white: #E8E9EB;
+}
+
+body{
+    background-image: url(../images/background1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    margin: auto;
+    text-align: center;
+    background-color: #3d343446;
+    color: var(--white);
+    width: 75%;
+    padding: 15px;
+    font-size: 4.2ch;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 0px !important;
+    border: 10px double goldenrod;
+    box-shadow: 0px 0px 10px 0px goldenrod;
+    
+}
+.header > h1{
+    font-family: "Alex Brush",cursive;
+    align-self: center;
+    text-shadow: 0px 0px 10px rgba(216, 139, 24, 0.774);
+}
+.header > .clock{
+    font-size: 0.9ch;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    color: #E8E9EB;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-color: #52454581;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid rgb(221, 120, 26);
+    box-shadow: 0px 0px 30px 0px rgba(216, 139, 24, 0.774);
+    padding: 10px;
+} 
+.main >  .row{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.main > .row > .blogPrev{
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--text);
+    border-radius: 10px;
+    background-color: #524545be;
+    gap: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+}   
+
+.main > .row > .blogPrev > ul{
+    width: 25vw;
+    background-color: #2e5eaa4d;
+    list-style: none;
+    padding: 0;
+}
+.main > .row > .blogPrev > ul > li{
+    padding: 10px;
+    margin: 3px;
+    background-color: #2a58206c;
+}
+.main > .row > .blogPrev > ul > li > a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.main > .row > .randomFacts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--text);
+    border-radius: 10px;
+    background-color: #524545be;
+    gap: 10px;
+    width: 18vw;
+    
+}
+.main > .row > .randomFacts > .factoid{
+    font-size: 2.5ch;
+    border-left: 10px solid #5db84b;
+    background-color: rgba(228, 170, 100, 0.466);
+    padding: 10px;
+    width: 15vw;
+}
+.main > .row > .randomFacts > h3 > a{
+    text-decoration: solid overline underline orange;
+    font-size: 2.5ch;
+    color: #B87D4B;
+}
+.main > .row > .messageMe{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid var(--text);
+    border-radius: 10px;
+    background-color: #524545be;
+    gap: 10px;
+}
+
+.main > .row > .messageMe >.guestBook{
+    width: 30vw;
+    height: 75vh;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+.main > .row > .learnMore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid var(--text);
+    background-color: #524545be;
+    gap: 10px;
+}
+
+.main > .row > .learnMore > .frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(216, 139, 24, 0.774);
+    overflow: hidden;
+}
+
+.main > .row > .learnMore > .frame > .me{
+    width: 300px;
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.main > .row > .learnMore > .frame > .me:hover{
+    transform: scale(1.1);
+}
+
+.main > .row > .learnMore > .btnMe{
+    margin-top: 10px;
+    background-color: var(--blue);
+    font-size: 2ch;
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+---
+layout: layout.html
+title: Landing Page
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+       <section class="main">
+    <h1>Hello, and Welcome to Generic After Hours</h1>
+    <h2>A Place where I do Blogs and Other Stuff</h2>
+    <div class="row">
+        <div class="blogPrev">
+            <h2>Blogs that I do</h2>
+            <h3>Will be Updated Monthly!</h3>
+            <ul>
+                {% for post in collections.blog %}
+                <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="randomFacts">
+            <h2>Random Fact</h2>
+            <blockquote class="factoid"></blockquote>
+        </div>
+        <div class="sis randomFacts">
+            <h2>Sister Sites</h2>
+            <h3><a href="https://imggal.vercel.app" target="_blank"> 📷 Gallery </a></h3>
+            <h3><a href="https://genericportfolio.vercel.app" target="_blank"> 📋 Portfolio </a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="learnMore">
+            <h2>Wanna Learn More About Me?</h2>
+            <div class="frame">
+                <img src="/images/me.jpg" alt="" srcset="" class="me">
+            </div>
+            <button class="btnMe">CLICK HERE</button>
+        </div>
+        <div class="messageMe">
+            <h2>Might Wanna Leave Me a Message?</h2>
+            <iframe src="https://genericco.atabook.org/" frameborder="0" scrolling="no" class="guestBook" title="Guest Book"></iframe>
+        </div>
+    </div>
+   </section>
+    <script src="/scripts/page.js"></script>
+</body>
+</html>

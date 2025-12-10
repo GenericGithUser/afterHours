@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+body{
+    background-color: black;
+    color: #E8E9EB;
+}
+
+.hidden{
+    opacity: 0%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title{
+    border-radius: 10px;
+    padding: 10px;
+    animation-name: sign;
+    animation-duration: 3s;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+
+.main > .title > h1{
+    font-family: "Alex Brush", cursive;
+    font-size: 15ch;
+    animation-delay: 3s;
+    animation-name: lights;
+    animation-duration: 2s;
+    opacity: 0;
+
+}
+
+.main > .enterBtn{
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    margin-top: 10px;
+    font-size: 3ch;
+    font-weight: 900;
+    border: 5px solid rgb(221, 120, 26);
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px rgba(216, 139, 24, 0.774);
+    background-color: #52454581;
+
+}
+.main > .enterBtn a{
+    text-decoration: none;
+    color: #E8E9EB;
+    padding: 10px;
+}
+.glowerShower{
+    opacity: 100% !important;
+    text-shadow: 0px 0px 10px rgba(216, 139, 24, 0.774);
+}
+
+.permaLight{
+    opacity: 100% !important;
+    border: 10px double goldenrod;
+    box-shadow: 0px 0px 10px 0px goldenrod;
+
+}
+
+.moveUp{
+    margin-bottom: 300px;
+}
+
+@keyframes lights {
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 10px rgba(216, 139, 24, 0.774);
+    }
+    50%{
+        opacity: 100%;
+        text-shadow: 0px 0px 40px rgba(216, 139, 24, 0.774);
+    }
+    100%{
+        opacity: 100%;
+        text-shadow: 0px 0px 20px rgba(216, 139, 24, 0.774);
+    }
+}
+
+@keyframes sign {
+    0%{
+        opacity: 0;
+        border: 0px;
+    }
+    25%{
+        opacity: 25%;
+        border: 10px double goldenrod;
+    }
+    50%{
+        opacity: 50%;
+        border: 10px double goldenrod;
+        box-shadow: 0px 0px 10px 0px goldenrod;
+    }   
+    75%{
+        opacity: 100%;
+        border: 10px double goldenrod;
+        box-shadow: 0px 0px 60px 0px goldenrod;
+    }
+    100%{
+        opacity: 100%;
+        border: 10px double goldenrod;
+        box-shadow: 0px 0px 10px 0px goldenrod;
+    }
+}
+
