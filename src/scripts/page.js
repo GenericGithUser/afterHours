@@ -15,7 +15,7 @@ const facts = [
     "No Facts This Time"
 ];
 
-const random = Math.floor(Math.random() * 13);
+const random = Math.floor(Math.random() * 12);
 const factoidBox = document.querySelector('.factoid');
 
 factoidBox.textContent = facts[random];
@@ -24,4 +24,10 @@ const btnMe = document.querySelector('.btnMe');
 
 btnMe.addEventListener("click", ()=>{
     window.location.assign("/pages/about/");
+});
+
+const block = document.querySelector('.black');
+
+block.addEventListener("animationend", ()=>{
+    block.classList.add("hidder");
 });

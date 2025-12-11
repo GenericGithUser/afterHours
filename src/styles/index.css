@@ -116,3 +116,25 @@ body{
     }
 }
 
+@media only screen and (max-width: 1024px){
+    .main > .title > h1{
+        font-size: 9ch;
+    }
+}
+
+@media only screen and (max-width: 747px){
+    .main > .title > h1{
+        font-size: 7ch;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main > .title{
+        width: 65%;
+        text-align: center;
+
+    }
+    .main > .title > h1{
+        font-size: 5ch;
+    }
+}

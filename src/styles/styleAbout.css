@@ -86,3 +86,35 @@ body{
 .main > .content > .moreContent > .likes{
     width: 25vw;
 }
+
+.main > .content > .moreContent > .socials{
+    max-width: 25vw;
+}
+
+@media only screen and (max-width: 768px){
+    .main > .content > .moreContent{
+        flex-direction: column;
+    }
+
+    .main > .content > .meBox > .me{
+        width: 25vw;
+        height: 30vw;
+    }
+    .main > .content > .moreContent{
+        align-items: center;
+    }
+
+    .main > .content > .moreContent > .aboutMeTxt,
+    .main > .content > .moreContent > .likes,
+    .main > .content > .moreContent > .socials{
+        width: 70vw;
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .main > .content > .meBox > .me{
+        width: 35vw;
+        height: 40vw;
+    }
+}

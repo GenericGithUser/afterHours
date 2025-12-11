@@ -16,7 +16,8 @@
 body {
     background-image: url(../images/backgroundB.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 120vw;
+    
 }
 
 .header {
@@ -56,12 +57,38 @@ body {
     box-shadow: 0px 0px 20px 0px rgb(10, 10, 187);
     color: var(--white);
     gap: 20px;
+    
+}
+
+.main > .menu{
+    display: none;
+    background-color: var(--secondary);
+    position: absolute;
+    width: 5vw;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
 }
 
 .main > .otherBlogs{
     width: 25vw;
     border-right: 3px solid var(--text);
     padding: 5px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.main > .otherBlogs h3{
+    margin-top: 20px;
+}
+
+.hidder{
+    width: 0px !important;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.rotate{
+    transform: rotate(90deg);
 }
 
 .main > .otherBlogs > ul{
@@ -81,9 +108,13 @@ body {
     border-left: 3px solid var(--secondary);
 }
 
+.main > .content {
+    margin-left: 10px;
+}
+
 .main > .content > figure > .imageBlog{
-    width: 300px;
-    height: 300px;
+    width: 15vw;
+    height: 30vh;
     padding: 10px;
 }
 
@@ -101,4 +132,101 @@ body {
     background-color: #54545446;
     border-radius: 10px;
     
+}
+
+@media only screen and (max-width: 1000px){
+    .header{
+        width: 90%;
+    }
+    .main{
+        width: 90%;
+    }
+    .main > .otherBlogs{
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    body{
+        background-size: 250vh;
+    }
+    .header{
+        font-size: 3.5ch;
+    }
+    .main > .otherBlogs{
+        width: 65vw;
+    }
+    .main > .content > figure > .imageBlog{
+        width: 30vw;
+        height: 45vh;
+    }
+}
+
+@media only screen and (max-width: 661px){
+    .header{
+        font-size: 3ch;
+    }
+    .main > .otherBlogs{
+        width: 75vw;
+    }
+    
+    
+}
+@media only screen and (max-width: 600px){
+    body{
+        background-size: 200vh;
+    }
+    .header{
+        width: 99%;
+    }
+    .main{
+        width: 95%;
+        
+    }
+    .main > .menu{
+        display: block;
+        width: 5vw;
+    }
+
+    .main > .otherBlogs{
+        font-size: 2ch;
+        margin-top: 20px;
+        position: absolute;
+        background-color: rgb(92, 83, 83);
+        
+    }
+    [aria-current]{
+        background-color: #2E5EAA;
+    }
+    .main > .content{
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .header h1{
+        font-size: 2ch;
+    }
+    .main > .menu{
+        width: 7vw;
+    }
+    .main > .content{
+        margin-left: 40px;
+    }
+    .main > .content > figure > .imageBlog{
+        width: 35vw;
+        height: 45vh;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .header {
+        padding: 8px;
+    }
+    .main > .menu{
+        width: 10vw;
+    }
+    .main > .content{
+        margin-left: 35px;
+    }
 }

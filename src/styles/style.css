@@ -19,6 +19,21 @@ body{
     background-size: cover;
 }
 
+.black{
+    position: absolute;
+    z-index: 2;
+    width: 500vh;
+    height: 500vh;
+    background-color: black;
+    animation-name: lightsOn;
+    animation-duration: 3s;
+    
+
+}
+.hidder{
+    display: none;
+}
+
 .header{
     margin: auto;
     text-align: center;
@@ -86,19 +101,40 @@ body{
     width: 25vw;
     background-color: #2e5eaa4d;
     list-style: none;
-    padding: 0;
+    padding: 10px;
+    border-radius: 10px;
 }
 .main > .row > .blogPrev > ul > li{
     padding: 10px;
     margin: 3px;
     background-color: #2a58206c;
+    border-bottom: 5px solid var(--blue);
+    transition: all 0.3s ease-in-out;
+
 }
+
+.main > .row > .blogPrev > ul > li:hover{
+    border: 5px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgb(10, 10, 187);
+    
+}
+
 .main > .row > .blogPrev > ul > li > a{
     color: var(--white);
     text-decoration: none;
 }
 
-.main > .row > .randomFacts{
+.main > .row > .blogPrev > ul > li > a:hover{
+    color: var(--blue);
+}
+
+.main > .row > .sect {
+    display: flex;
+    gap: 10px;
+}
+
+.main > .row > .sect >.randomFacts{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -111,14 +147,14 @@ body{
     width: 18vw;
     
 }
-.main > .row > .randomFacts > .factoid{
+.main > .row > .sect > .randomFacts > .factoid{
     font-size: 2.5ch;
     border-left: 10px solid #5db84b;
     background-color: rgba(228, 170, 100, 0.466);
     padding: 10px;
     width: 15vw;
 }
-.main > .row > .randomFacts > h3 > a{
+.main > .row > .sect > .randomFacts > h3 > a{
     text-decoration: solid overline underline orange;
     font-size: 2.5ch;
     color: #B87D4B;
@@ -138,7 +174,7 @@ body{
 .main > .row > .messageMe >.guestBook{
     width: 30vw;
     height: 75vh;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 10px;
     
 }
@@ -154,15 +190,15 @@ body{
 }
 
 .main > .row > .learnMore > .frame {
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 0px rgba(216, 139, 24, 0.774);
     overflow: hidden;
 }
 
 .main > .row > .learnMore > .frame > .me{
-    width: 300px;
+    width: 25vw;
     transition: all 0.3s ease-in-out;
     object-fit: cover;
 }
@@ -176,4 +212,125 @@ body{
     background-color: var(--blue);
     font-size: 2ch;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px){
+    .main > .row > .sect {
+        flex-direction: column;
+    }
+    .main > .row > .sect > .randomFacts {
+        width: 30vw;
+    }
+    .main h1, h2{
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .header{
+        width: 90%;
+        font-size: 3.6ch;
+    }
+    .main{
+        width: 90%;
+    }
+    .main > .row > .sect > .randomFacts {
+        width: 38vw;
+    }
+
+    .main > .row > .sect > .randomFacts > .factoid{
+        width: 30vw;
+    }
+    .main > .row > .blogPrev{
+        height: 60vh;
+        width: 40vw;
+    }
+
+    .main > .row > .blogPrev ul{
+        width: 30vw;
+    }
+
+    .main > .row > .messageMe >.guestBook{
+        width: 45vw;
+    }
+}
+@media only screen and (max-width: 600px){
+    .header{
+        width: 99%;
+    }
+    .main > .row{
+        flex-direction: column;
+    }
+
+    .main > .row > .sect > .randomFacts {
+        width: 70vw;
+    }
+
+    .main > .row > .sect > .randomFacts > .factoid{
+        width: 60vw;
+    }
+    .main > .row > .blogPrev{
+        height: 60vh;
+        width: 70vw;
+    }
+    .main > .row > .blogPrev ul{
+        width: 60vw;
+    }
+
+    .main > .row > .learnMore > .frame{
+        width: 50vw;
+        height: 40vh;
+    }
+
+    .main > .row > .learnMore > .frame > .me{
+        width: 50vw;
+    }
+
+    .main > .row > .messageMe > .guestBook{
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .main > .row > .sect > .randomFacts {
+        width: 80vw;
+    }
+
+    .main > .row > .sect > .randomFacts > .factoid{
+        width: 60vw;
+    }
+    .main > .row > .blogPrev{
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .main > .row > .learnMore > .frame{
+        width: 50vw;
+        height: 30vh;
+    }
+
+    .main > .row > .learnMore > .frame > .me{
+        width: 50vw;
+    }
+}
+
+
+@keyframes lightsOn {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 90%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 25%;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
 }
